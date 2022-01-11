@@ -1,0 +1,17 @@
+input{
+    width: 150px;
+}
+#logout{
+    margin-top: 20%;
+    justify-content: first baseline;
+}
+
+#retirar{
+    /* margin-bottom: 2%; */
+}
+#ingresar{
+    /* margin-top: %; */
+}
+#saldo{
+    margin-top: 22%;
+}
