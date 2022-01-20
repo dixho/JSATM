@@ -1,0 +1,120 @@
+ /* ! Código para eliminar la barra de Scroll Vertical ! */
+@media only screen and (orientation: landscape) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  
+    @-moz-document url-prefix() {
+  
+      html,
+      body {
+        overflow: hidden !important;
+      }
+    }
+  
+    element {
+      overflow-y: scroll;
+    }
+}
+
+#MadeBy{
+
+    margin-left:0;
+    border: 2px solid white;
+    border-top-right-radius: 20em;
+    border-bottom-right-radius: 20em ;
+    width: 10%;
+    padding-right: 0;
+    background-color: rgb(192, 192, 192);
+    color: black;
+}
+
+#MadeBy p{
+    margin-left: 8%;
+}
+
+body{
+    background-image: url(https://fondosmil.com/fondo/27738.jpg);
+    background-repeat: no-repeat;
+}
+
+#BoxGeneral{
+    width: 100vw;
+}
+
+#BoxCentral{
+    border: 3px solid gray;
+    margin: auto;
+    width: 50%;
+    background-color: rgb(192, 192, 192);
+}
+
+#Pantalla{
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-family: monospace;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;    
+    color: rgb(182, 0, 0);
+    background-color: rgb(53, 53, 53);
+    border: 4px inset rgb(119, 119, 119);
+}
+
+#Inferior{
+    margin: auto;
+    width: 50%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#Botonera{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-left: -2%;
+    
+}
+
+#Botonera input{
+    width: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    border: outset;
+    border-radius: 20em;
+}
+#Botonera input:hover{
+    border: 2px inset red;
+    border-radius: 20em;
+    background-color: rgb(204, 204, 204);
+}
+
+#direc{
+    display: flex;
+    flex-direction: column;
+}
+
+#misma{
+    height: 5%;
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+#subir{
+    rotate: -90deg;
+    width: 5%;
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+#bajar{
+    rotate:90deg;
+    width: 5%;
+    margin: auto;
+    margin-bottom: 1%;
+}

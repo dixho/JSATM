@@ -1,0 +1,33 @@
+#MadeBy{
+    margin-left:0;
+    border: 2px solid white;
+    border-top-right-radius: 20em;
+    border-bottom-right-radius: 20em ;
+    width: 10%;
+    padding-right: 0;
+    background-color: rgb(243, 242, 242);
+    color: black;
+}
+
+#MadeBy p{
+    margin-left: 8%;
+}
+
+#BoxCentral{
+    border: 3px solid gray;
+    margin: auto;
+    width: 35%;
+    background-color: rgb(93, 231, 81);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#BoxCentral div{
+    margin: auto;
+}
+
+body{
+    background-color: brown;
+}

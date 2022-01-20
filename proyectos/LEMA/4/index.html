@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Tablas de multiplicar</title>
+
+    </head>
+    <body>
+        <div id="contenedor1">
+
+        </div>
+        <script>
+            crearDiv();
+            rellenar();
+
+
+            function crearDiv(){
+            
+            for (var f = 1; f<=10; f++){
+                document.getElementById("contenedor1").innerHTML += "<div id='tabla'></div>"
+                }
+        }
+        
+        function rellenar() {
+          for (var f = 1; f <= 10; f++) {
+              document.getElementById('tabla').innerHTML += "<h2>Tabla del "+f+"</h2>"
+            for (var i = 1; i <= 10; i++) {
+                document.getElementById('tabla').innerHTML += "<p>"+f+"*"+i+"="+(f*i)+"</p>";
+            }
+            
+          }
+        }
+        </script>
+    </body>
+</html>

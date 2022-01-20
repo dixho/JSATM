@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Problema</title>
+<link rel="StyleSheet" href="practica1.css" type="text/css">
+</head>
+<body>
+<div id="contenedor1">
+
+</div>
+<script>
+    var cantidad=parseInt(prompt("¿Cuantas Cajas quieres?"))
+    for (var f=1;f<cantidad;f++){
+        document.getElementById("contenedor1").innerHTML+="<div id='caja"+f+"'></div>"
+    }
+var valor1=parseInt(prompt('Ingrese  número:',''));
+for (var indice=2 ; indice<cantidad;indice++){
+    if (indice%5 == 0){
+        document.getElementById("caja"+indice).textContent ="X";
+    }else{	document.getElementById("caja"+indice).textContent = indice;}
+	//parseInt(document.getElementById("caja"+(indice-1)).textContent)+(++valor1);
+}
+
+</script>
+
+
+
+</body>
+</html>

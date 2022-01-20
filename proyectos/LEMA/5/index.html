@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Separar Letras</title>
+</head>
+<body>
+    <div id="contenedor1"></div>
+</body>
+<script>
+    var palabra = null;
+    pedirPalabra()
+    crearDiv()
+    rellenarDiv()
+    function pedirPalabra(){
+        palabra = prompt("Ingrese Palabra");
+    }
+    function crearDiv(){
+        for (var f=0;f<palabra.length;f+=2){
+            document.getElementById('contenedor1').innerHTML +="<div id='letra"+f+"'></div>"
+        }
+    }
+    function rellenarDiv(){
+        for(var i = 0; i<palabra.length;i+=2){
+            document.getElementById("letra"+i).innerHTML += palabra.charAt(i)
+            document.getElementById("letra"+i).innerHTML += palabra.charAt(i+1);
+        }
+        
+    }
+</script>
+</html>

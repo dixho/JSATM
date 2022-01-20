@@ -1,0 +1,33 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var nombre;
+        var edad;
+        var loop = true;
+
+    nombre=prompt('Ingrese su nombre:','');
+    edad=prompt('Ingrese su edad:','');
+    document.write('Hola '+nombre+"<h1> Tienes "+edad+" años</h1>");
+    if (edad >= 18) {
+        document.write("Eres mayor de edad");
+        while(loop == true){
+            var estado=prompt("Hola "+nombre+" como estás?");
+            if(estado == "Bien"){
+                if(confirm("¿Seguro?")==true){
+                    alert("¡Me alegro!")
+                    loop = false;
+                }
+                
+            }else{
+                alert("Hablame cuando estes Bien");
+            }
+        }
+    }else{
+        document.write("Eres menor de edad")
+    }
+    
+  </script>
+    </body>
+</html>

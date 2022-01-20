@@ -1,0 +1,6 @@
+p:nth-child(even){
+    color: blue;
+}
+#tabla:nth-child(odd){
+    color: red;
+}
