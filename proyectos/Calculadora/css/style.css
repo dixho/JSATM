@@ -1,0 +1,115 @@
+body {
+  background-color: #343434;
+}
+
+#MadeBy {
+  margin-left: 0;
+  border: 2px solid white;
+  border-top-right-radius: 20em;
+  border-bottom-right-radius: 20em;
+  width: 10%;
+  padding-right: 0;
+  background-color: rgb(243, 242, 242);
+  color: black;
+}
+
+#MadeBy p {
+  margin-left: 8%;
+}
+
+#BoxCentral {
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #343434;
+  border: 10px outset #252523;
+  border-radius: 0.5em;
+}
+
+#BoxCentral div {
+  margin: auto;
+}
+
+#Botonera {
+  text-align: center;
+}
+
+#Botonera table {
+  width: 20em;
+  height: 30em;
+  background-color: #252523;
+  color: white;
+}
+
+#boton {
+  border: 3px outset #1d1c1c;
+  border-radius: 2em;
+  background: rgb(47, 47, 47);
+  background: linear-gradient(
+    90deg,
+    rgba(47, 47, 47, 1) 0%,
+    rgba(65, 65, 65, 1) 100%
+  );
+}
+
+#boton:hover {
+  border: 3px inset #1d1c1c;
+  background: rgb(47, 47, 47);
+  background: linear-gradient(90deg, rgb(29, 28, 28) 0%, rrgb(37, 37, 37) 100%);
+}
+
+#C {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(253, 91, 89, 1) 100%
+  );
+  border: 3px outset rgb(255, 0, 0);
+}
+
+#C:hover {
+  border: 3px inset rgb(165, 4, 4);
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgb(211, 42, 42) 0%,
+    rgb(138, 26, 24) 100%
+  );
+}
+
+#eq {
+    border: 3px outset #105a97;
+  background: rgb(12, 67, 110);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 67, 110, 1) 0%,
+    rgba(25, 121, 198, 1) 100%
+  );
+}
+
+#eq:hover {
+    border: 3px inset #105a97;
+  background: rgb(12, 67, 110);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 67, 110, 1) 0%,
+    rgb(17, 70, 114) 100%
+  );
+}
+
+#Pantalla {
+  padding: 0.3em;
+  text-align: end;
+  border: 2px inset black;
+  width: 20em;
+  height: 5em;
+}
+#Pantalla h1 {
+  padding-right: 0.3em;
+  background-color: #a7af7c;
+  height: 100%;
+  margin: auto;
+}
