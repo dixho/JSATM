@@ -2,6 +2,7 @@ body {
   background-color: #343434;
 }
 
+
 #MadeBy {
   margin-left: 0;
   border: 2px solid white;
@@ -43,7 +44,7 @@ body {
   color: white;
 }
 
-#boton {
+#boton44 {
   border: 3px outset #1d1c1c;
   border-radius: 2em;
   background: rgb(47, 47, 47);
@@ -52,12 +53,21 @@ body {
     rgba(47, 47, 47, 1) 0%,
     rgba(65, 65, 65, 1) 100%
   );
+  width: max-content;
+  height: fit-content;
 }
 
 #boton:hover {
-  border: 3px inset #1d1c1c;
+  border: 3px outset #1d1c1c;
   background: rgb(47, 47, 47);
   background: linear-gradient(90deg, rgb(29, 28, 28) 0%, rrgb(37, 37, 37) 100%);
+}
+
+#boton:active{
+  border: 3px inset #1b1a1a;
+  background: rgb(32, 32, 32);
+  background: linear-gradient(90deg, rgb(19, 18, 18) 0%, rrgb(27, 27, 27) 100%);
+
 }
 
 #C {
@@ -68,9 +78,20 @@ body {
     rgba(253, 91, 89, 1) 100%
   );
   border: 3px outset rgb(255, 0, 0);
+  border-radius: 3em;
 }
 
 #C:hover {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(253, 91, 89, 1) 100%
+  );
+  border: 3px outset rgb(204, 19, 19);
+}
+
+#C:active {
   border: 3px inset rgb(165, 4, 4);
   background: rgb(255, 0, 0);
   background: linear-gradient(
@@ -81,7 +102,8 @@ body {
 }
 
 #eq {
-    border: 3px outset #105a97;
+  border: 3px outset #105a97;
+  border-radius: 3em;
   background: rgb(12, 67, 110);
   background: linear-gradient(
     90deg,
