@@ -1,0 +1,79 @@
+#MadeBy{
+    margin-left:0;
+    border: 2px solid white;
+    border-top-right-radius: 20em;
+    border-bottom-right-radius: 20em ;
+    width: 10%;
+    padding-right: 0;
+    background-color: rgb(243, 242, 242);
+    color: black;
+}
+
+#MadeBy p{
+    margin-left: 8%;
+}
+
+#BoxCentral{
+    border: 3px solid gray;
+    margin: auto;
+    width: 35%;
+    background-image: url(../media/background.jpg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+
+#BoxCentral div{
+    margin: auto;
+}
+
+#nums{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 5%;
+}
+
+#nums div{
+    border: 4px ridge rgb(146, 150, 145) ;
+    background-color: rgb(255, 242, 219);
+    width: 5em;
+    text-align: center;   
+}
+
+#block{
+    padding-top: 10%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#block input{
+    padding-right: 5%;
+}
+
+#divCounter{
+    text-align: center;
+    background-color: white;
+    width: 10%;
+    border: 2px outset gray
+}
+
+#tirador{
+    padding-top: 5%;
+}
+
+#Premios{
+    padding-top: 5%;
+    
+    height: auto;
+    width: fit-content;
+    padding-bottom: 2%;
+}
+
+#Premios fieldset{
+    background-color: white;
+}
