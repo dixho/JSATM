@@ -121,6 +121,10 @@
     clear           : left;
 
   }
+
+  .general2{ /* !Borrar al terminar */
+    display: none;
+  }
 }
 
 /** Fin Ordenador **/

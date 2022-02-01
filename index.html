@@ -6,209 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name=theme-color" content="#9d4edd">
-  <link rel="stylesheet" href="./css/general.css" />
+  <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/general2.css" />
   <!-- <link rel="stylesheet" href="./css/general2.css"> -->
 
   <title>JSATM - Inicio de Sesion</title>
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="./js/main.js">
-    users;
-    pins;
-    emails;
-    nombres;
-    saldos;
-    celdaUser;
-    seguridad;
-    index;
-    registro;
-    cajero;
-  </script>
-  <script>
-    /** 
-    * ! Error
-    * * Info
-    * ? Duda
-    * TODO: To-Do
-    **/
-
-    //             --- Scripts de Registro ---
-    function mostrarRegistro() {
-      document.getElementById("boxGeneral").innerHTML = registro
-    }
-
-    function confirmarRegistro() {
-      user = document.getElementsByName("user")[0].value;
-      email = document.getElementsByName("email")[0].value;
-      nombre = document.getElementsByName("nombre")[0].value;
-      pin = parseInt(document.getElementsByName("pin")[0].value);
-      if (user != "" && email != "" && nombre != "" && pin != "") {
-        if (email.indexOf("@") != -1 && email.indexOf(".") != -1) {
-          users.push(user)
-          emails.push(email)
-          nombres.push(nombre)
-          pins.push(pin)
-          saldos.push(0)
-          //console.log(users)
-          swal("Registro completado", "Bienvenido " + nombre, "info");
-          mostrarIndex();
-          //window.location="index.html"
-        } else {
-          swal("El correo no es valido", "", "error")
-        }
-
-      } else {
-        swal("No puedes dejar campos vacios", "", "warning")
-      }
-    }
-
-    function buscarEnterR(event) {
-      if (event.which == 13 || event.keyCode == 13) {
-        confirmarRegistro();
-        return false;
-      }
-      return true;
-
-    }
-    //             -- Scripts de Index --
-    function mostrarIndex() {
-      document.getElementById("boxGeneral").innerHTML = index
-    }
-
-    var user = null;
-    var pin = null;
-    var check = false;
-
-    function iniciarSesion() {
-      user = document.getElementsByName("user")[0].value;
-      pin = document.getElementsByName("pin")[0].value;
-      //alert("User: "+user+" Pin: "+pin);
-      if (user != '' && pin != '') {
-        validarUser();
-      } else {
-        swal("Atención", "No puede dejar campos vacíos", "warning");
-      }
-    }
-    function validarUser() {
-
-      if (user == "DebugMode") {
-        debugMode()
-      } else {
-        for (let f = 0; f < users.length; f++) {
-          if (users[f] == user) {
-            celdaUser = f;
-            f = users.length;
-            validarPin();
-
-          } else {
-            if (f == (users.length - 1) && users[celdaUser] != user) {
-              swal("Error en el inicio de sesión", "Usuario o contraseña Incorrectos", "error");
-            }
-          }
-        }
-
-      }
-
-      function validarPin() {
-        if (pins[celdaUser] == pin) {
-          swal(
-            {
-              title: "Inicio Correcto",
-              text: "Bienvenido " + nombres[celdaUser],
-              icon: "success",
-              timer: 1500,
-            });
-          check = true;
-          mostrarCajero();
-        } else {
-          swal("Error en el inicio de sesión", "Usuario o contraseña Incorrectos", "error");
-        }
-      }
-    }
-
-    function buscarEnterIS(event) {
-      if (event.which == 13 || event.keyCode == 13) {
-        iniciarSesion();
-        return false;
-      }
-      return true;
-
-    }
-    //             -- Scripts de Cajero --
-    function mostrarCajero() {
-      if (check == true) {
-        document.getElementById("boxGeneral").innerHTML = cajero;
-        document.getElementById("logo").innerHTML = "<h2>Bienvenido " + nombres[celdaUser] + "</h2>";
-      } else {
-        swal("Error en el inicio de sesión", "", "error")
-        document.getElementById("boxGeneral").innerHTML = index;
-      }
-
-    }
-
-    function verSaldo() {
-      swal("Su saldo actual es de: " + saldos[celdaUser] + "€", "", "info")
-    }
-
-    function ingreso() {
-      swal("Cantidad a ingresar:", {
-        content: "input",
-      })
-        .then((value) => {
-          if (value > 0) {
-            saldos[celdaUser] += parseInt(value);
-            verSaldo();
-          }
-          else {
-            swal("Error", "Cantidad Erronea", "error")
-          }
-        });
-    }
-
-    function retiro() {
-      swal("Cantidad a retirar:", {
-        content: "input",
-      })
-        .then((value) => {
-          if (value > 0) {
-            saldos[celdaUser] -= parseInt(value);
-            verSaldo();
-          } else {
-            swal("Error", "Cantidad Erronea", "error")
-          }
-        });
-    }
-
-    function cerrarSesion() {
-      check = false;
-      document.getElementById("boxGeneral").innerHTML = index;
-    }
-
-    //             -- Debug Mode --
-
-    function debugMode() {
-      var sel = parseInt(prompt("1.Users 2.Pins 3.Saldos 4.Nombres 5.Emails"))
-      switch (sel) {
-        case 1:
-          alert(users)
-          break
-        case 2:
-          alert(pins)
-          break
-        case 3:
-          alert(saldos)
-          break
-        case 4:
-          alert(nombres)
-          break
-        case 5:
-          alert(emails)
-          break
-      }
-    }
-
-
-
   </script>
 </head>
 
@@ -217,10 +22,13 @@
     <p id="powered">Powered By <a href="./proyectos/" style="text-decoration: none;color: white;">Dixho</a></p>
     <center>
       <div id="logo">
-        <h1>JSATM</h1>
+        <img src="./media/logotransparente.png" alt="" class="general2">
+        <h1 class="general1">JSATM</h1>
       </div>
 
       <div id="boxCentral">
+
+        <h1 class="general2" id="IS">Inicio de sesión</h1>
         <form action="">
           <div id="form">
             <input type="text" name="user" class="input" id="inUser" required placeholder="Usuario"
@@ -231,16 +39,14 @@
           </div>
 
 
-          <input type="button" class="boton" onclick="iniciarSesion()" value="Iniciar Sesion" />
-          <input type="button" class="boton" value="Registrarse" onclick="mostrarRegistro()">
+          <input type="button" class="boton" value="Iniciar Sesion" id="btnISI"/>
+          <input type="button" class="boton" value="Registrarse" id="btnRI"/>
 
         </form>
       </div>
     </center>
   </div>
-  <script>
- 
-  </script>
+
 </body>
 
 </html>
