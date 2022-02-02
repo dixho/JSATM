@@ -21,7 +21,7 @@ function tirar() {
 }
 
 function block(evnt){
-    console.log("gola")
+    
  if(block[0] == 0){
     let x = evnt.target
     console.log(x.id)
