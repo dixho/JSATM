@@ -12,9 +12,7 @@
 
   <title>JSATM - Inicio de Sesion</title>
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="./js/main.js">
-  </script>
+
 </head>
 
 <body>
@@ -35,18 +33,19 @@
               onkeypress="return buscarEnterIS(event)" />
             <input type="password" name="pin" class="input" id="inPin" required placeholder="Contraseña"
               onkeypress="return buscarEnterIS(event)" />
-
           </div>
-
-
-          <input type="button" class="boton" value="Iniciar Sesion" id="btnISI"/>
-          <input type="button" class="boton" value="Registrarse" id="btnRI"/>
-
+          <div id="Botones">
+            <input type="button" class="boton" value="Iniciar Sesion" id="btnISI" />
+            <input type="button" class="boton" value="Registrarse" id="btnRI" />
+          </div>
         </form>
       </div>
     </center>
   </div>
 
 </body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./js/main.js"></script>
 
 </html>
