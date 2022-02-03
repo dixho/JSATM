@@ -1,4 +1,4 @@
-![Logo JSATM](http://dixho.me/media/favicon.ico?raw=true "Logo JSATM")
+![Logo JSATM](http://dixho.me/media/logo.png?raw=true "Logo JSATM")
 
 # JSATM 🏧
 
