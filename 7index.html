@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name=theme-color" content="#9d4edd">
+  <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/general2.css" />
+  <!-- <link rel="stylesheet" href="./css/general2.css"> -->
+
+  <title>JSATM - Inicio de Sesion</title>
+
+
+</head>
+
+<body>
+  <div id="boxGeneral">
+    <p id="powered">Powered By <a href="./proyectos/" >Dixho</a></p>
+    <center>
+      <div id="logo">
+        <img src="./media/logotransparente.png" alt="" class="general2">
+        <h1 class="general1">JSATM</h1>
+      </div>
+
+      <div id="boxCentral">
+
+        <h1 class="general2" id="IS">Inicio de sesión</h1>
+        <form action="">
+          <div id="form">
+            <input type="text" name="user" class="input" id="inUser" required placeholder="Usuario"
+              onkeypress="return buscarEnterIS(event)" />
+            <input type="password" name="pin" class="input" id="inPin" required placeholder="Contraseña"
+              onkeypress="return buscarEnterIS(event)" />
+          </div>
+          <div id="Botones">
+            <input type="button" class="boton" value="Iniciar Sesion" id="btnISI" />
+            <input type="button" class="boton" value="Registrarse" id="btnRI" />
+          </div>
+        </form>
+      </div>
+    </center>
+  </div>
+
+</body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

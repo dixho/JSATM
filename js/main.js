@@ -12,7 +12,7 @@
     var saldoElegido = saldos[celdaUser];
     var nombreElegido = nombres[celdaUser];
 
-    
+
 
 
 
@@ -128,15 +128,122 @@
     //*             -- Scripts de Index --
     function mostrarIndex() {
       document.title = "JSATM - Inicio de Sesión"
-      document.getElementById("boxGeneral").innerHTML = index
+      crearIndex()
+      console.log("aaaa")
+      activarListener()
+      //document.getElementById("boxGeneral").innerHTML = index
+      
+    }
+
+    function activarListener() {
+      console.log("fsdgsdf")
       document.getElementById("btnISI").addEventListener("click",iniciarSesion,false)
       document.getElementById("btnRI").addEventListener("click",mostrarRegistro,false)
       
+
     }
 
     var user = null;
     var pin = null;
     var check = false;
+
+      function crearIndex(){
+        const body = document.body
+
+          var BoxGeneral = document.createElement("div")
+          BoxGeneral.id = "boxGeneral"
+
+            var powered = document.createElement("p")
+            powered.id = "powered"
+            powered.innerHTML = 'Powered By <a href="./proyectos/" >Dixho</a>'
+          
+
+            var center = document.createElement("center")
+              var logo = document.createElement("div")
+              logo.id = "logo"
+            
+              center.appendChild(logo)
+
+                var img = document.createElement("img")
+                img.src = "./media/logotransparente.png"
+                img.className = "general2"
+
+                var h1 = document.createElement("h1")
+                h1.className = "general1"
+                h1.textContent = "JSATM"
+            
+              logo.appendChild(img)
+              logo.appendChild(h1)
+
+            
+          BoxGeneral.appendChild(powered)
+          
+
+        
+
+            var BoxCentral = document.createElement("div")
+            BoxCentral.id = "boxCentral"
+
+              
+              h1 = document.createElement("h1")
+              h1.className = "general2"
+              h1.id = "IS"
+              h1.innerText = "Inicio de sesión"
+
+              BoxCentral.appendChild(h1)
+              var formG = document.createElement("form")
+                var form = document.createElement("div")
+                form.id = "form"
+
+                  var inUser = document.createElement("input")
+                  inUser.id = "inUser"
+                  inUser.type = "text"
+                  inUser.name = "user"
+                  inUser.className = "input"
+                  inUser.placeholder = "Usuario"
+                  inUser.setAttribute("onkeypressed","return buscarEnterIS(event)")
+
+                  var inPin = document.createElement("input")
+                  inPin.id = "inPin"
+                  inPin.type = "password"
+                  inPin.name = "pin"
+                  inPin.className = "input"
+                  inPin.placeholder = "PIN"
+                  inPin.setAttribute("onkeypressed","return buscarEnterIS(event)")
+                
+                
+                form.appendChild(inUser)
+                form.appendChild(inPin)
+
+                var Botones = document.createElement("div")
+                Botones.id = "Botones"
+
+                  var btnISI = document.createElement("input")
+                  btnISI.id = "btnISI"
+                  btnISI.value = "Iniciar Sesion"
+                  btnISI.className = "boton"
+                  btnISI.type = "button"
+
+                  var btnRI = document.createElement("input")
+                  btnRI.id = "btnRI"
+                  btnRI.value = "Registrarse"
+                  btnRI.className = "boton"
+                  btnRI.type = "button"
+
+                Botones.appendChild(btnISI)
+                Botones.appendChild(btnRI)
+
+              
+              formG.appendChild(form)  
+              formG.appendChild(Botones) 
+
+            BoxCentral.appendChild(formG)
+
+
+            center.appendChild(BoxCentral)
+          BoxGeneral.appendChild(center)
+        body.appendChild(BoxGeneral)
+      }
 
     function iniciarSesion() {
       user = document.getElementsByName("user")[0].value;
@@ -274,3 +381,4 @@
     }
 
 
+mostrarIndex()
