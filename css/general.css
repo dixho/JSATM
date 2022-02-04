@@ -29,6 +29,7 @@
     background-repeat: no-repeat;
     height           : 150vh;
     /* position      : fixed; */
+    margin: 0;
   }
 
   #boxGeneral {
@@ -120,6 +121,10 @@
     padding-left    : 0;
     clear           : left;
 
+  }
+
+  .general2{ /* !Borrar al terminar */
+    display: none;
   }
 }
 
