@@ -29,6 +29,11 @@
   display: none;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 body{
   background-color: #132651;
   padding: 0;
