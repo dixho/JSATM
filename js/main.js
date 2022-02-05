@@ -201,7 +201,7 @@
                   inUser.name = "user"
                   inUser.className = "input"
                   inUser.placeholder = "Usuario"
-                  inUser.setAttribute("onkeypressed","return buscarEnterIS(event)")
+                  inUser.setAttribute("onkeypress","return buscarEnterIS(event)")
 
                   var inPin = document.createElement("input")
                   inPin.id = "inPin"
@@ -209,7 +209,7 @@
                   inPin.name = "pin"
                   inPin.className = "input"
                   inPin.placeholder = "PIN"
-                  inPin.setAttribute("onkeypressed","return buscarEnterIS(event)")
+                  inPin.setAttribute("onkeypress","return buscarEnterIS(event)")
                 
                 
                 form.appendChild(inUser)
