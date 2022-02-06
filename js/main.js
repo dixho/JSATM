@@ -1,4 +1,4 @@
-// window.addEventListener("load",mostrarIndex,false)
+
 
     users=new Array("flf","test","janf");
     pins=new Array(1234,"0000",1010);
@@ -11,71 +11,7 @@
     var pinElegido = pins[celdaUser];
     var saldoElegido = saldos[celdaUser];
     var nombreElegido = nombres[celdaUser];
-
-
-
-
-
-    var index = '  <div id="boxGeneral">\
-    <p id="powered">Powered By <a href="./proyectos/" style="text-decoration: none;color: white;">Dixho</a></p>\
-    <center>\
-      <div id="logo">\
-        <h1>JSATM</h1>\
-      </div>\
-      <div id="boxCentral">\
-        <form action="">\
-          <div id="form">\
-            <input type="text" name="user" class="input" id="inUser" required placeholder="Usuario"\
-              onkeypress="return buscarEnterIS(event)" />\
-            <input type="password" name="pin" class="input" id="inPin" required placeholder="Contraseña"\
-              onkeypress="return buscarEnterIS(event)" />\
-          </div>\
-          <input type="button" class="boton" value="Iniciar Sesion" id="btnISI"/>\
-          <input type="button" class="boton" value="Registrarse" id="btnRI"/>\
-        </form>\
-      </div>\
-    </center>\
-  </div>\
-'
     
-    var registro='<p id="powered">Powered By <a href="./proyectos/" style="text-decoration: none;color: white;">Dixho</a></p>\
-    <center>\
-        <div id="logo">\
-            <h1>JSATM</h1>\
-        </div>\
-        <div id="boxCentral">\
-            <form action="">\
-                <div>\
-                    <input type="text" name="user" required class="input" placeholder="Usuario" id="inUser" onkeypress="return buscarEnterR(event)">\
-                    <input type="email" name="email" required class="input" placeholder="Correo Electronico" id="inEmail" onkeypress="return buscarEnterR(event)">\
-                    <input type="text" name="nombre" required class="input" placeholder="Nombre" id="inNombre" onkeypress="return buscarEnterR(event)">\
-                    <input type="password" name="pin" required class="input" placeholder="Pin" id="inPin" onkeypress="return buscarEnterR(event)">\
-                </div>\
-                <input type="button" class="boton" value="Iniciar Sesion" id="btnISR">\
-                <input type="button" class="boton" value="Registrarse" id="btnRR">\
-                \
-            </form>\
-        </div>\
-    </center>'
-
-    var cajero = '<p id="powered">Powered By <a href="./proyectos/" style="text-decoration: none;color: white;">Dixho</a></p>\
-    <center>\
-    <div id="logo">\
-      <h2>Bienvenid</h2>\
-    </div>\
-    <div id="boxCentral">\
-      <form action="">\
-        <div><input type="button" class="boton" value="Ver Saldo" name="saldo"  id="btnS"></div>\
-        <div><input type="button" class="boton" value="Ingresar" name="ingresar" id="btnI"></div>\
-        <div><input type="button" class="boton" value="Retirar" name="retirar" id="btnR"></div>\
-        <div><input type="button" class="boton" value="Cerrar Sesion" name="logout" id="btnCS"></div>\
-      </form>\
-    </div>\
-  </center>'
-
-
-
-
   /** 
     * ! Error
     * * Info
@@ -83,14 +19,161 @@
     * TODO: To-Do
     **/
 
-    //*             --- Scripts de Registro ---
+    //!            --- Scripts Generales ---
+
+    function activarListener(opcion){
+      switch (opcion){
+        case 0:
+          document.getElementById("btnISI").addEventListener("click",iniciarSesion,false)
+          document.getElementById("btnRI").addEventListener("click",mostrarRegistro,false)
+        break;
+
+        case 1:
+          document.getElementById("IS").innerText = "Bienvenido " + nombres[celdaUser];
+          document.getElementById("btnS").addEventListener("click",verSaldo,false)
+          document.getElementById("btnI").addEventListener("click",ingreso,false)
+          document.getElementById("btnR").addEventListener("click",retiro,false)
+          document.getElementById("btnCS").addEventListener("click",cerrarSesion,false)
+        break;
+
+        case 2:
+          document.getElementById("btnISR").addEventListener("click",mostrarIndex,false)
+          document.getElementById("btnRR").addEventListener("click",confirmarRegistro,false)
+        break;
+      }
+    }
+
+
+
+
+    //!             --- Scripts de Registro ---
     function mostrarRegistro() {
       document.title = "JSATM - Registro"
-      document.getElementById("boxGeneral").innerHTML = registro
-      document.getElementById("btnISR").addEventListener("click",mostrarIndex,false)
-      document.getElementById("btnRR").addEventListener("click",confirmarRegistro,false)
+      vaciarBody()
+      crearRegistro()
+      activarListener(2)
+
 
     }
+
+    function crearRegistro(){
+      
+      const body = document.body
+
+          var BoxGeneral = document.createElement("div")
+          BoxGeneral.id = "boxGeneral"
+
+            var powered = document.createElement("p")
+            powered.id = "powered"
+            powered.innerHTML = 'Powered By <a href="./proyectos/" >Dixho</a>'
+          
+            BoxGeneral.appendChild(powered)
+
+            var center = document.createElement("center")
+              var logo = document.createElement("div")
+              logo.id = "logo"
+            
+              center.appendChild(logo)
+
+                var img = document.createElement("img")
+                img.src = "./media/logotransparente.png"
+                img.className = "general2"
+
+                var h1 = document.createElement("h1")
+                h1.className = "general1"
+                h1.textContent = "JSATM"
+            
+              logo.appendChild(img)
+              logo.appendChild(h1)
+
+            
+          
+          
+
+        
+            center.appendChild(logo)
+            var BoxCentral = document.createElement("div")
+            BoxCentral.id = "boxCentral"
+
+              
+              h1 = document.createElement("h1")
+              h1.className = "general2"
+              h1.id = "IS"
+              h1.innerText = "Registro"
+
+              BoxCentral.appendChild(h1)
+              var formG = document.createElement("form")
+                var form = document.createElement("div")
+                form.id = "form"
+
+                  var inUser = document.createElement("input")
+                  inUser.id = "inUser"
+                  inUser.type = "text"
+                  inUser.name = "user"
+                  inUser.className = "input"
+                  inUser.placeholder = "Usuario"
+                  inUser.setAttribute("onkeypress","return buscarEnterR(event)")
+
+                  var inPin = document.createElement("input")
+                  inPin.id = "inPin"
+                  inPin.type = "password"
+                  inPin.name = "pin"
+                  inPin.className = "input"
+                  inPin.placeholder = "PIN"
+                  inPin.setAttribute("onkeypress","return buscarEnterR(event)")
+
+                  var inEmail = document.createElement("input")
+                  inEmail.id = "inEmail"
+                  inEmail.type = "email"
+                  inEmail.name = "email"
+                  inEmail.className = "input"
+                  inEmail.placeholder = "Email"
+                  inEmail.setAttribute("onkeypress","return buscarEnterR(event)")
+
+                  var inNombre = document.createElement("input")
+                  inNombre.id = "inNombre"
+                  inNombre.type = "text"
+                  inNombre.name = "nombre"
+                  inNombre.className = "input"
+                  inNombre.placeholder = "Nombre"
+                  inNombre.setAttribute("onkeypress","return buscarEnterR(event)")
+                
+                
+                form.appendChild(inUser)
+                form.appendChild(inEmail)
+                form.appendChild(inNombre)
+                form.appendChild(inPin)
+
+                var Botones = document.createElement("div")
+                Botones.id = "Botones"
+
+                  var btnISR = document.createElement("input")
+                  btnISR.id = "btnISR"
+                  btnISR.value = "Iniciar Sesion"
+                  btnISR.className = "boton"
+                  btnISR.type = "button"
+
+                  var btnRR = document.createElement("input")
+                  btnRR.id = "btnRR"
+                  btnRR.value = "Registrarse"
+                  btnRR.className = "boton"
+                  btnRR.type = "button"
+
+                Botones.appendChild(btnISR)
+                Botones.appendChild(btnRR)
+
+              
+              formG.appendChild(form)  
+              formG.appendChild(Botones) 
+
+            BoxCentral.appendChild(formG)
+
+
+            center.appendChild(BoxCentral)
+          BoxGeneral.appendChild(center)
+        body.appendChild(BoxGeneral)
+    }
+
 
     function confirmarRegistro() {
       user = document.getElementsByName("user")[0].value;
@@ -104,10 +187,9 @@
           nombres.push(nombre)
           pins.push(pin)
           saldos.push(0)
-          //console.log(users)
+
           swal("Registro completado", "Bienvenido " + nombre, "info");
           mostrarIndex();
-          //window.location="index.html"
         } else {
           swal("El correo no es valido", "", "error")
         }
@@ -125,23 +207,23 @@
       return true;
 
     }
-    //*             -- Scripts de Index --
+    //!             -- Scripts de Index --
     function mostrarIndex() {
       document.title = "JSATM - Inicio de Sesión"
+      vaciarBody()
       crearIndex()
-      console.log("aaaa")
-      activarListener()
-      //document.getElementById("boxGeneral").innerHTML = index
+      activarListener(0)
+
       
     }
+    
+    function vaciarBody() {
 
-    function activarListener() {
-      console.log("fsdgsdf")
-      document.getElementById("btnISI").addEventListener("click",iniciarSesion,false)
-      document.getElementById("btnRI").addEventListener("click",mostrarRegistro,false)
-      
+      document.body.innerHTML = null
 
     }
+
+
 
     var user = null;
     var pin = null;
@@ -248,7 +330,7 @@
     function iniciarSesion() {
       user = document.getElementsByName("user")[0].value;
       pin = document.getElementsByName("pin")[0].value;
-      //alert("User: "+user+" Pin: "+pin);
+
       if (user != '' && pin != '') {
         validarUser();
       } else {
@@ -300,22 +382,125 @@
       return true;
 
     }
-    //*             -- Scripts de Cajero --
+    //!             -- Scripts de Cajero --
     function mostrarCajero() {
       if (check == true) {
         document.title = "JSATM - Cajero"
-        document.getElementById("boxGeneral").innerHTML = cajero;
-        document.getElementById("logo").innerHTML = "<h2>Bienvenido " + nombres[celdaUser] + "</h2>";
-        document.getElementById("btnS").addEventListener("click",verSaldo,false)
-        document.getElementById("btnI").addEventListener("click",ingreso,false)
-        document.getElementById("btnR").addEventListener("click",retiro,false)
-        document.getElementById("btnCS").addEventListener("click",cerrarSesion,false)
-
+        
+        vaciarBody()
+        crearCajero()
+        activarListener(1)
       } else {
         swal("Error en el inicio de sesión", "", "error")
         document.getElementById("boxGeneral").innerHTML = index;
       }
 
+    }
+
+    function crearCajero(){
+      const body = document.body
+
+      var BoxGeneral = document.createElement("div")
+      BoxGeneral.id = "boxGeneral"
+
+        var powered = document.createElement("p")
+        powered.id = "powered"
+        powered.innerHTML = 'Powered By <a href="./proyectos/" >Dixho</a>'
+
+        BoxGeneral.appendChild(powered)
+
+        var center = document.createElement("center")
+
+          var logo = document.createElement("div")
+          logo.id = "logo"
+        
+          center.appendChild(logo)
+
+            var img = document.createElement("img")
+            img.src = "./media/logotransparente.png"
+            img.className = "general2"
+
+            var h1 = document.createElement("h1")
+            h1.className = "general1"
+            h1.textContent = "JSATM"
+        
+          logo.appendChild(img)
+          logo.appendChild(h1)
+
+          center.appendChild(logo)
+
+          var BoxCentral = document.createElement("div")
+          BoxCentral.id = "boxCentral"
+
+          h1 = document.createElement("h1")
+          h1.className = "general2"
+          h1.id = "IS"
+          h1.innerText = "Bienvenido"
+
+          BoxCentral.appendChild(h1)
+
+          var formG = document.createElement("form")
+
+              var divSaldo = document.createElement("div")
+
+                var btnS = document.createElement("input")
+                btnS.type = "button"
+                btnS.className = "boton"
+                btnS.value = "Ver Saldo"
+                btnS.name = "saldo"
+                btnS.id = "btnS"
+
+                divSaldo.appendChild(btnS)
+
+              formG.appendChild(divSaldo)
+
+              var divIngresar = document.createElement("div")
+
+                var btnI = document.createElement("input")
+                btnI.type = "button"
+                btnI.className = "boton"
+                btnI.value = "Ingresar"
+                btnI.name = "ingresar"
+                btnI.id = "btnI"
+
+              divIngresar.appendChild(btnI)
+
+              var divRetirar = document.createElement("div")
+
+                var btnR = document.createElement("input")
+                btnR.type = "button"
+                btnR.className = "boton"
+                btnR.value = "Retirar"
+                btnR.name = "retirar"
+                btnR.id = "btnR"
+
+              divRetirar.appendChild(btnR)
+
+              var divLogout = document.createElement("div")
+
+                var btnCS = document.createElement("input")
+                btnCS.type = "button"
+                btnCS.className = "boton"
+                btnCS.value = "Cerrar Sesion"
+                btnCS.name = "logout"
+                btnCS.id = "btnCS"
+
+              divLogout.appendChild(btnCS)
+
+
+              formG.appendChild(divSaldo)
+              formG.appendChild(divIngresar)
+              formG.appendChild(divRetirar)
+              formG.appendChild(divLogout)
+
+            BoxCentral.appendChild(formG)
+
+          center.appendChild(BoxCentral)
+
+        BoxGeneral.appendChild(center)
+
+
+      body.appendChild(BoxGeneral)
     }
 
     function verSaldo() {
