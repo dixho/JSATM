@@ -4,100 +4,93 @@
 }
 
 @media only screen and (orientation: landscape) {
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  
-    @-moz-document url-prefix() {
-  
-      html,
-      body {
-        overflow: hidden !important;
-      }
-    }
-  
-    element {
-      overflow-y: scroll;
-    }
-  
+  ::-webkit-scrollbar {
+    display: none;
   }
-*{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  @-moz-document url-prefix() {
+    html,
+    body {
+      overflow: hidden !important;
+    }
+  }
+
+  element {
+    overflow-y: scroll;
+  }
+}
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.general1{ /* !Borrar al terminar */
+.general1 {
+  /* !Borrar al terminar */
   display: none;
 }
 
-body{
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
   background-color: #132651;
   padding: 0;
   margin: 0;
 }
 
 #powered {
-  text-align      : left;
-  color           : white;
-  font-size       : small;
+  text-align: left;
+  color: white;
+  font-size: small;
   background-color: rgb(76, 150, 247);
-  width           : 7%;
-  border          : 1px solid white;
-  border-left     : 0;
-  padding-left    : 0.5em;
-  border-top-right-radius:2em;
-  border-bottom-right-radius:2em ;
-
+  width: 7%;
+  border: 1px solid white;
+  border-left: 0;
+  padding-left: 0.5em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
 }
 
-
-
-#IS{
+#IS {
   color: #ffffff;
   font-family: Fonarto;
   padding-top: 5%;
 }
 
-#boxGeneral{
-    height: 100vh;
-    width: 100vw;
-    
-
+#boxGeneral {
+  height: 100vh;
+  width: 100vw;
 }
 
-#boxCentral{
-    background-color: #0C1B3C;
-    width: 30%;
-    margin: auto;
-    border-radius:5em ;
-    height: 20em;
+#boxCentral {
+  background-color: #0c1b3c;
+  width: 30%;
+  margin: auto;
+  border-radius: 5em;
+  height: 20em;
 }
 
-#inUser{
-    border: 1px solid;
-    border-radius: 6px;
-}
 
-#inPin{
-    border: 1px solid;
-    border-radius: 6px;
-}
 
-#Botones{
+#Botones {
   margin-top: 5%;
 }
 
-#form{
+#form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
-input{
-width: 15%;
-margin-top: 1em;
+input {
+  width: 15%;
+  margin-top: 1em;
+  border: 1px solid;
+  border-radius: 6px;
 }
 
-.boton{
+.boton {
   width: 20%;
 }
