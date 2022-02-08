@@ -302,7 +302,7 @@
 
                   var btnISI = document.createElement("input")
                   btnISI.id = "btnISI"
-                  btnISI.value = "Iniciar Sesion"
+                  btnISI.value = "Iniciar Sesión"
                   btnISI.className = "boton"
                   btnISI.type = "button"
 

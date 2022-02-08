@@ -56,7 +56,7 @@ body {
 #IS {
   color: #ffffff;
   font-family: Fonarto;
-  padding-top: 5%;
+  padding-top: 12%;
 }
 
 #boxGeneral {
@@ -68,7 +68,9 @@ body {
   background-color: #0c1b3c;
   width: 30%;
   margin: auto;
-  border-radius: 5em;
+  border-radius: 0.7em;
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
   height: 20em;
 }
 
@@ -85,7 +87,7 @@ body {
 }
 
 input {
-  width: 15%;
+  width: 25%;
   margin-top: 1em;
   border: 1px solid;
   border-radius: 6px;
@@ -93,4 +95,26 @@ input {
 
 .boton {
   width: 20%;
+  background-color: #132B69;
+  border: outset #11265E 3px;
+  color: #C1C2C3;
+  padding-bottom: 1%;
+  width: 8em;
+  border-radius: 0.6em;
 }
+
+.boton:active{
+  border: inset #132B69 2px;
+  background-color: #11265E;
+}
+
+#btnISI{
+  margin-right: 2%;
+  width: 7em;
+}
+
+#btnRI{
+  margin-left: 2%;
+  width: 7em;
+}
+
