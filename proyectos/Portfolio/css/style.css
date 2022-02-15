@@ -1,16 +1,82 @@
-#boxCentral{
+* {
+    box-sizing: border-box;
+  }
+  
+  #boxGeneral {
+    width: 100%;
+    background-color: #8da4b3;
+    height: 100vh;
+  }
+  
+  #boxCentral {
     display: grid;
     place-content: center;
-}
-
-#title{
-    margin-top: 15%;
-}
-
-header{
-    background-color: rgb(128, 127, 127);
     text-align: center;
-    display: flex;
-    flex-direction: row;
     align-items: center;
-}
+    color: #3c464d;
+  }
+  
+  #language{
+      margin-top: 1%;
+      position: absolute;
+  }
+
+  #language button{
+      border: 0;
+      color: white;
+      background-color: #515e66;
+  }
+
+  #em {
+    font-size: larger;
+    margin-top: 20%;
+  }
+  
+  #title {
+    margin-top: 15%;
+    font-size: 55px;
+  }
+  
+  #name {
+    margin-top: 3%;
+    font-size: 25px;
+  }
+  
+  #profile {
+    border-radius: 25em;
+    margin-top: 10%;
+  }
+  
+  #header {
+    background-color: #515e66;
+    padding-top: 1%;
+    box-shadow: black 0px 1px 10px;
+    --bs-gutter-x: 0; /* parametro de bootstrap puesto a 0 para que no haga un miniscrol a la derecha*/
+  }
+  
+  #header div {
+    text-align: center;
+    color: white;
+    padding-bottom: 0.5%;
+    border-bottom: solid #515e66;
+  }
+  
+  #header div:hover {
+    border-bottom: solid #bfdff2;
+    color: #bfdff2;
+    cursor: pointer;
+  }
+  
+
+  
+
+
+  /* Paleta de colores:
+      #515E66
+      #BFDFF2
+      #8DA4B3
+      #5B6A73
+      #3C464D
+  
+  */
+  
