@@ -17,14 +17,42 @@
   }
   
   #language{
-      margin-top: 1%;
+      margin-top: 0.9%;
+      margin-left: 1%;
       position: absolute;
+      cursor: pointer;
   }
 
   #language button{
       border: 0;
       color: white;
       background-color: #515e66;
+  }
+
+  #language:hover {
+    
+    color: #bfdff2;
+    cursor: pointer;
+  }
+
+
+  #languageMenu{
+    margin-top: 1%;
+    display: none;
+    flex-direction: column;
+    box-shadow: rgb(61, 61, 61) 0px 7px 10px;
+
+    border-left: #3c464d 20px;
+    border-right: #3c464d 20px;
+    
+  }
+
+  #langMenu:hover{
+    margin-bottom: -2px;
+  }
+
+  #langButton:hover{
+    color: #8da4b3;
   }
 
   #em {
@@ -61,12 +89,13 @@
     border-bottom: solid #515e66;
   }
   
-  #header div:hover {
+  #header div:hover, #langMenu:hover {
     border-bottom: solid #bfdff2;
     color: #bfdff2;
     cursor: pointer;
   }
   
+
 
   
 
