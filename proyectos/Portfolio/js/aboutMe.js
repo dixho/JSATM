@@ -53,21 +53,7 @@ activateEventListeners = () => {
         false
     );
 
-    document.getElementById("home").addEventListener("click", x = () => {
-        document.location = "./index.html"
-    }, false)
-
-    document.getElementById("aboutMe").addEventListener("click", x = () => {
-        document.location = "./aboutMe.html"
-    }, false)
-
-    document.getElementById("projects").addEventListener("click", x = () => {
-        document.location = "./projects.html"
-    }, false)
-
-    document.getElementById("contact").addEventListener("click", x = () => {
-        document.location = "./contact.html"
-    }, false)
+    
 
 }
 
