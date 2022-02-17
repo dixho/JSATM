@@ -19,10 +19,5 @@ function recoger() {
   check = check === "true";
   console.log(check + " +");
 
-  if (check != true) {
-    alert("Error en el incio");
-    window.location = "./index.html";
-  } else {
-    console.log("correcto");
-  }
+
 }
