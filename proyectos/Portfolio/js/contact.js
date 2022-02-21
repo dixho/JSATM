@@ -1,0 +1,24 @@
+cathUrl()
+    function cathUrl() {
+        var paramstr = window.location.search.substr(1);
+        var paramarr = paramstr.split("&");
+        var params = {};
+      
+        for (var i = 0; i < paramarr.length; i++) {
+          var tmparr = paramarr[i].split("=");
+          params[tmparr[0]] = tmparr[1];
+        }
+        console.log(params);
+        var x = params.x;
+        x = params.x;
+
+        console.log(x);
+        
+        if(x == "done"){
+            alert("Email enviado correctamente")
+        } else if(x == "error"){
+            alert("Algo ha salido mal, vuelva a intentarlo")
+        }
+      
+      
+      }
