@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "active-record-js": "^2.0.30"
+  }
+}

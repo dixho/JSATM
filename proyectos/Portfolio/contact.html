@@ -37,23 +37,23 @@
                 <form action="contact.php" method="post">
                     <div id="form">
                         <div id="nombre">
-                            <label for="name">Nombre</label>
+                            <label for="name" id="labelName">Nombre</label>
                             <input type="text" id="name" name="visitor_name" placeholder="John Doe"
-                                pattern=[A-Z\sa-z]{3,20} required>
+                                 required>
                         </div>
                         <div class="elem-group">
-                            <label for="email">Correo Electrónico</label>
+                            <label for="email" id="labelEmail">Correo Electrónico</label>
                             <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com"
                                 required>
                         </div>
 
                         <div class="elem-group">
-                            <label for="razon">Razón para contactar</label>
-                            <input type="text" id="razon" name="email_title" required
+                            <label for="razon" id="labelSubject">Razón para contactar</label>
+                            <input type="text" id="subject" name="email_title" required
                                 placeholder="Asunto" pattern=[A-Za-z0-9\s]{8,60}>
                         </div>
                         <div class="elem-group">
-                            <label for="message">Mensaje</label>
+                            <label for="message" id="labelMessage">Mensaje</label>
                             <textarea id="message" name="visitor_message" placeholder="Escribe lo que quieras"
                                 required></textarea>
                         </div>

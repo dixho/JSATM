@@ -1,0 +1,73 @@
+/*! General */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+    background-image: url("../media/fondo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/** Fin General */
+
+/*! Header */
+
+#header{
+    background-color: black;
+    color: white;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+}
+
+#menu div{
+    
+    margin: 2em;
+}
+
+#logo{
+    margin-left: auto;
+    width: 5%;
+}
+
+/** Fin Header */
+
+/*! Content */
+
+#content-page{
+    
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.767);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content-page div{
+
+    background-color: rgba(216, 216, 216, 0.37);
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 15%;
+    padding: 2%;
+}
+
+.title{
+    text-align: center;
+    
+}
+
+.content{
+    padding-top: 10%;
+}
+
+/** Fin Content */
