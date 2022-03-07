@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+}
+
+#MadeBy{
+    margin-left:0;
+    border: 2px solid white;
+    border-top-right-radius: 20em;
+    border-bottom-right-radius: 20em ;
+    width: 10%;
+    margin-top: 1%;
+    padding-right: 1%;
+    background-color: rgb(182, 181, 181);
+    color: black;
+}
+
+#MadeBy p{
+    margin-left: 8%;
+}
+
+#BoxCentral{
+    border: 3px solid gray;
+    margin: auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+
+#BoxCentral div{
+    margin: auto;
+}
+
+#nums{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#nums div{
+    margin-bottom: 10%;
+}
+
+#playButton{
+    padding-bottom: 5%;
+}
+
+#player2{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.num{
+    border: 2px solid black;
+}
