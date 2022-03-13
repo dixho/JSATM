@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src",
+    "start": "node src/js/",
     "dev": "nodemon src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +14,9 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "morgan": "^1.10.0"
+    "http-server": "^14.1.0",
+    "morgan": "^1.10.0",
+    "uniq": "^1.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
