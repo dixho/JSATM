@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JQuery</title>
+        <style>
+            #erdih{
+                position: absolute;
+                width: 1000px;
+                height: 100px;
+                background-color: aqua;
+            }
+
+            #div2{
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                background-color: red;
+            }
+
+            #div3{
+
+                display: none;
+            }
+
+            #div4{
+
+                display: none;
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p id="a">Esto es un P</p>
+            <h1 id="b">Esto es un H1</h1>
+            <p id="c">Esto es otro P</p>
+
+            <button id="hide">Click!</button>
+            <button id="toggle">Toggle</button>
+
+            <div id="erdih">
+                <h2>v</h2>
+            </div>
+        </div>
+        <div class="container">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+
+            <div id="div2">
+                <h2>a</h2>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <button id="aa">Morado Cuadrado</button>
+            <button id="bb">Azul Rectangulo</button>
+
+            <div id="div3">
+                <h2>Div3</h2>
+            </div>
+
+            <div id="div4">
+                <h2>Div4</h2>
+            </div>
+        </div>
+
+
+    </body>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        var loop = true;
+    $(document).ready(function(){
+        $("#div2").slideUp("fast")
+/**
+        $("#a").click(function(){
+            $("#a").hide("slow");
+        })
+
+        $("#b").click(function(){
+            $("#c").hide("slow");
+        })
+
+        $("#c").click(function(){
+
+            $("#b").hide("fast");
+            
+        })
+
+          $("#hide").click(function(){
+
+            $("p").fadeIn();
+            $("h1").fadeOut("slow");
+
+        })
+
+        $("#hide").dblclick(function(){
+
+            $("#c").css("color","#18fF5f")
+            //$("#b").slideToggle("medium")
+
+        })**/
+
+        $("#toggle").click(function(){
+            
+            $("p").toggle("slow"),
+            $("#b").slideUp("slow")
+            $("#erdih").animate({
+                height: 'toggle',
+                width: '150px',
+                fontSize: '50px'
+                
+            })
+            
+        })
+
+        //$("#hide").click(function(){
+         //   $("div").animate({left: '50px'})
+        //})
+
+        /**$("#hide").click(function(){
+            $("div").animate({
+                left: '150px',
+                height: '+=500px',
+                width: '+=500px'
+            });
+          });*//
+
+          $("#hide").click(function(){
+            $("#erdih").animate({
+              left: '250px',
+              height: '+=150px',
+              width: '+=150px',
+              fontSize: '+=50px',
+            });
+            
+          });
+
+          $("#start").click(function(){
+            $("#div2").slideDown(3000) 
+          })
+
+          $("#stop").click(function(){
+              $("#div2").stop()
+              
+          })
+
+          $("#stop").dblclick(function(){
+              $("#div2").slideUp("fast",function(){
+                  alert("Cuadro rojo desvanecido")
+              })
+          })
+
+          $("#aa").click(function(){
+
+              $("#div3").animate({
+                  height: "100px",
+                  width: "100px"
+              }).css({
+                  "background-color":"purple",
+                  "display":"flex"
+                })
+          })
+
+          $("#aa").dblclick(function(){
+              $("#div3").css("display","none")
+          })
+
+          $("#bb").click(function(){
+              $("#div4").animate({
+                  height: "100px",
+                  width: "150px"
+              }).css({
+                  "background-color":"blue",
+                  display:"flex"
+              })
+          })
+    })
+
+    
+</script>
+</html>
+
+<script>
+</script>
