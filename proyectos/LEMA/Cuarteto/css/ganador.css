@@ -1,0 +1,7 @@
+#BoxCentral{
+    border: 2px brown outset;
+    text-align: center;
+    background-color: goldenrod;
+    color: rgb(231, 46, 0);
+    box-shadow:  black 20px 10px 10px
+}

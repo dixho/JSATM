@@ -1,0 +1,49 @@
+body{
+    margin:0;
+}
+
+#BoxGeneral{
+    display: flex;
+
+}
+
+#BoxCentral{
+    width: 45%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#inp{
+    margin: auto
+}
+
+#resul{
+    text-align: center
+}
+
+#tablero{
+    border: 3px outset black;
+    display: flex;
+    flex-direction:column-reverse;
+    background-color:rgb(189, 190, 190) ;
+}
+
+#nums{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    
+}
+
+.num{
+    border: 2px outset gray;
+    padding: 1em;
+    margin: auto;
+    background-color: azure;
+}
+
+#botonJugar{
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom:2%;
+}
