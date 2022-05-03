@@ -1,0 +1,66 @@
+*{
+    font-family: monospace;
+}
+
+#boxGeneral{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#img{
+    width: 10%;
+    position: absolute;
+}
+
+#boxCentral{
+    margin: auto;
+    background-color: lightcoral;
+    width: 30%;
+    border: 5px outset burlywood;
+
+}
+
+#stock{
+    text-align: center;
+}
+
+#reserva{
+    margin-top: 5em;
+    text-align: center;
+ 
+}
+#formReserva{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
+    text-align: justify;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#formReserva div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#divBtn{
+    margin: auto;
+}
+
+
+
+#btnReservar{
+    background-color: blueviolet;
+}
+
+input{
+    border: 5px outset cyan;
+}

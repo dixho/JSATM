@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jugadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="jugadores.xsd">
+    <jugador>
+        <nombre>Fran</nombre>
+        <puntos>10</puntos>
+    </jugador>
+    <jugador>
+        <nombre>Jose</nombre>
+        <puntos>10</puntos>
+    </jugador>
+</jugadores>

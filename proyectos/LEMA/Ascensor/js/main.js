@@ -24,12 +24,17 @@ document.getElementById("num").innerHTML = "<h1>" + pisoAscen + "</h1>"
 
     function crearBotones() {
         for (var i = 0; i <= numPisos; i++) {
-            document.getElementById("Botonera").innerHTML += '<input type="button" value="' + i + '" onclick="botonPresionado(' + i + ')">'
+            let btn = document.createElement("input")
+            btn.type = "button";
+            btn.value = i;
+            btn.addEventListener("click",() => { botonPresionado(btn.value) });
+            document.getElementById("Botonera").appendChild(btn);
+            // document.getElementById("Botonera").innerHTML += '<input type="button" value="' + i + '" onclick="botonPresionado(' + i + ')">'
         }
     }
 
-    function botonPresionado(piso) {
-
+    botonPresionado = (piso) => {
+        
         pisoSeleccionado = piso;
         if (pisoSeleccionado != pisoAscen) {
             if (pisoSeleccionado < pisoAscen && pisoSeleccionado != pisoAscen) {
@@ -44,11 +49,11 @@ document.getElementById("num").innerHTML = "<h1>" + pisoAscen + "</h1>"
 
 
     function bajar() {
-        document.getElementById("direc").innerHTML = '<h1 id="bajar">></h1>';
+        document.getElementById("direc-text").id = "bajar"
         for (pisoAscen; pisoAscen > pisoSeleccionado; pisoAscen--) {
-            document.getElementById("num").innerHTML = '<h1 id="num">' + pisoAscen + '</h1>';
+            document.getElementById("num").textContent = pisoAscen
         }
-        document.getElementById("num").innerHTML = '<h1 id="num">' + pisoAscen + '</h1>';
+        document.getElementById("num").children[0].textContent = pisoAscen
     }
 
     function subir() {

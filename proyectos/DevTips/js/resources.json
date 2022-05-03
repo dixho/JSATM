@@ -1,0 +1,155 @@
+[
+  {
+    "id": -1,
+    "types": [
+      "API",
+      "Cheatsheets",
+      "CSSGenerator",
+      "Documentation",
+      "Examples",
+      "MediaResources",
+      "Responsive",
+      "Roadmap",
+      "Tools",
+      "FileTools",
+      "WebTools"
+      
+      
+    ]
+  },
+  {
+    "id": 0,
+    "name": "DevDocs",
+    "type": "Documentation",
+    "url": "https://devdocs.io/"
+  },
+  {
+    "id": 1,
+    "name": "DevHints",
+    "type": "Cheatsheets",
+    "url": "https://devhints.io/"
+  },
+  {
+    "id": 2,
+    "name": "CssReference",
+    "type": "Examples",
+    "url": "https://cssreference.io/"
+  },
+  {
+    "id": 3,
+    "name": "RapidAPI",
+    "type": "API",
+    "url": "https://rapidapi.com/"
+  },
+  {
+    "id": 4,
+    "name": "Responsively",
+    "type": "Responsive",
+    "url": "https://responsively.app/"
+  },
+  {
+    "id": 5,
+    "name": "Small Dev Tools",
+    "type": "Tools",
+    "url": "https://smalldev.tools/"
+  },
+  {
+    "id": 6,
+    "name": "Box Shadow",
+    "type": "CSSGenerator",
+    "url": "https://box-shadow.dev"
+  },
+  {
+    "id": 7,
+    "name": "CSSBud",
+    "type": "CSSGenerator",
+    "url": "https://cssbud.com/css-generator"
+  },
+  {
+    "id": 8,
+    "name": "Shadow Brumm",
+    "type": "CSSGenerator",
+    "url": "https://shadows.brumm.af/"
+  },
+  {
+    "id": 9,
+    "name": "Drop Shadow",
+    "type": "CSSGenerator",
+    "url": "https://webcode.tools/generators/css/drop-shadow"
+  },
+  {
+    "id": 10,
+    "name": "Unsplash",
+    "type": "MediaResources",
+    "url": "https://unsplash.com/"
+  },
+  {
+    "id": 11,
+    "name": "FreePik",
+    "type": "MediaResources",
+    "url": "https://freepik.es/"
+  },
+  {
+    "id": 12,
+    "name": "CSSButtonGenerator",
+    "type": "CSSGenerator",
+    "url": "https://bestcssbuttongenerator.com/"
+  },
+  {
+    "id": 13,
+    "name": "Bootstrap_5_Cheatsheet",
+    "type": "Cheatsheets",
+    "url": "https://bootstrap-cheatsheet.themeselection.com/"
+  },
+  {
+    "id": 14,
+    "name": "RoadMap.sh",
+    "type": "Roadmap",
+    "url": "https://roadmap.sh/"
+  },
+  {
+    "id": 15,
+    "name": "StreamlineHQ",
+    "type": "MediaResources",
+    "url": "https://streamlinehq.com/"
+  },
+  {
+    "id": 16,
+    "name": "W3Schools",
+    "type": "Documentation",
+    "url": "https://w3schools.com"
+  },
+  {
+    "id": 17,
+    "name": "MDN_Web_Docs",
+    "type": "Documentation",
+    "url": "https://developer.mozilla.org"
+  },
+  {
+    "id": 18,
+    "name": "TinyWow",
+    "type": "FileTools",
+    "url": "https://tinywow.com/"
+  },
+  {
+    "id": 19,
+    "name": "FileZilla",
+    "type": "FileTools",
+    "url": "https://filezilla-project.org/"
+  },
+  {
+    "id": 20,
+    "name": "GitHub_Dixho",
+    "type": "Other",
+    "url": "https://github.com/dixho"
+  },
+  {
+    "id": 21,
+    "name": "GitHub",
+    "type": "WebTools",
+    "url": "https://github.com"
+
+  }
+  
+  
+]
