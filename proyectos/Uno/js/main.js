@@ -1,10 +1,27 @@
 main = () =>{
-    generatePlayers();
-    createTable();
-    createFirstCard();
-    activateEventListener();
-    showActualPlayer();
-    checkHand()
+    pickUpCards();
+    setTimeout(()=>{
+        generatePlayers();
+        createTable();    
+        createFirstCard();
+        activateEventListener();
+    },300)
+    // showActualPlayer();
+    // checkHand()
+}
+
+pickUpCards = () =>{
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+    
+        console.log(JSON.parse(xhttp.responseText).length)
+        for(let f = 0; f < JSON.parse(xhttp.responseText).length; f++){
+            totalCards.push(JSON.parse(xhttp.responseText)[f]);
+        }
+    }
+    xhttp.open("GET", "../cards.json", true);
+    xhttp.send();
+
 }
 
 activateEventListener = () =>{
@@ -25,7 +42,6 @@ activateEventListener = () =>{
         checkHand()
     })
 }
-
 
 draw = (num) =>{
     console.log("draw "+ num )
@@ -107,14 +123,14 @@ unCheckHand = () =>{
 
 selectCard = (e) =>{
 
-    unCheckHand();
-
+    
     let card = e.target;
     console.error(card)
     console.log(card.getAttribute("player"))
     if(card.getAttribute("player") == turn){
-
+        
         if(card.className == principalCard.className || card.textContent == principalCard.textContent || card.getAttribute("type") == "draw4"){
+            unCheckHand();
             console.log("correct");
             console.warn(card)
             console.warn(principalCard)
@@ -149,6 +165,7 @@ selectCard = (e) =>{
                     }
                 }
             }
+            turn = checkTurn();
 
         }else{
             console.log("incorrect");
@@ -156,7 +173,6 @@ selectCard = (e) =>{
             console.warn(principalCard)
         }
 
-        turn = checkTurn();
     }else{
         console.log("no es tu turno");
         console.warn(card)
@@ -216,6 +232,7 @@ changeColor = () =>{
     console.log(color)
     principalCard.className = "card "+ color;
 }
+
 //! Generators
 
 generateDivCard = (card,player) =>{
@@ -266,34 +283,12 @@ generateHand = () =>{
 
 generateCard = () =>{
 
-    var color
-    var colors = ["red","blue","green","yellow"];
-    var number
-    var numbers = [0,1,2,3,4,5,6,7,8,9];
-    var special
-    var specials = ["skip","reverse","draw2"];
-    var type
-    var types = ["regular","draw4"];
-    if((Math.floor(Math.random()*100))<draw4Posibility){
-        color = "black"
-        number = -1
-        special = "none"
-        type = types[1];
-        
-    }else{
-        
-        color = colors[Math.floor(Math.random()*colors.length)];
-        
-        if((Math.floor(Math.random()*100))<draw2Posibility){
-            number = -1
-            special = specials[Math.floor(Math.random()*specials.length)];
-        }else{
-            number = numbers[Math.floor(Math.random()*numbers.length)];
-            special = "none"
-        }
-        type = types[0];
-    }
-    var card = new Card(color,number,special,type);
+    let tempCard = totalCards[Math.floor(Math.random()*totalCards.length)];
+
+    console.log(tempCard)
+    
+    totalCards.splice(totalCards.indexOf(tempCard),1);
+    var card = new Card(tempCard.color,tempCard.number,tempCard.special,tempCard.type);
  
     return card
 
@@ -324,18 +319,22 @@ var turn = 0;
 
 var principalCard
 
-const maxCards = 3
+const maxCards = 5
 
-const numPlayers = 3
+const numPlayers = 4
 
 const draw4Posibility = 5
 
 const draw2Posibility = 25
 
-var players = new Array()
+const changeColorPosibility = 15
+
+var players = new Array();
+
+var totalCards = new Array();
 
 const body = document.body
 
-console.clear()
+// console.clear()
 
 window.addEventListener("load",main)
